@@ -1,0 +1,17 @@
+<%= form_for @track do |f| %>
+  <div>
+    <%= f.text_field :artist, placeholder: "Artist" %>
+  </div>
+  <div>
+    <%= f.text_field :title, placeholder: "Title" %>
+  </div>
+  <div>
+    <%= f.text_field :url, placeholder: "Spotify url" %>
+  </div>
+  <div>
+    <%= f.text_field :notes, placeholder: "Notes" %>
+  </div>
+  
+  <%= f.submit %>
+
+<% end %>

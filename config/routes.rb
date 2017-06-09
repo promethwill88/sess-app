@@ -8,5 +8,8 @@ Rails.application.routes.draw do
 	get '/logout', to: 'sessions#destroy'
 	post '/sessions', to: 'sessions#create'
 	get '/tracks', to: 'tracks#index'
+	get '/tracks/new', to: 'tracks#new', as: 'new_track'
+	post '/tracks', to: 'tracks#create'
+	get 'tracks/:id', to: 'tracks#show', as: 'track'
 
 end
