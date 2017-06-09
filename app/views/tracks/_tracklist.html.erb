@@ -1,0 +1,8 @@
+<% @tracks.each do |track| %>
+  <div>
+    <h3><%= track.title %> by <%= track.artist %></h3>
+    <p>Spotify url: <%= track.url %></p>
+    <p>Notes: <%= track.notes %></p>
+  </div>
+  <br>
+<% end %>
