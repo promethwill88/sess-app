@@ -17,4 +17,6 @@ Rails.application.routes.draw do
 	delete '/tracks/:id', to: 'tracks#destroy'
 	# Events
 	get '/events', to: 'events#index'
+	get '/events/new', to: 'events#new', as: 'new_event'
+	post '/events', to: 'events#create'
 end
