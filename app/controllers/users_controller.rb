@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 	   	if current_user != @user
 	   		redirect_to root_path, notice: "Access Denied"
 	   	end
+	   	@tracks = @user.tracks
 	end
 
 	# PRIVATE
