@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 	   		redirect_to root_path, notice: "Access Denied"
 	   	end
 	   	@tracks = @user.tracks
+	   	@events = @user.events
 	end
 
 	# PRIVATE
