@@ -3,5 +3,6 @@
 <p><%=  @track.url %></p>
 <p><%=  @track.notes %></p>
 
-<%= button_to "Delete", @track, method: :delete %>
-<%= button_to "Edit", @track, method: :update %>
+
+<%= link_to "Delete", @track, method: :delete%>
+<%= link_to "Update", edit_track_path %>
