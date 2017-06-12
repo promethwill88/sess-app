@@ -8,12 +8,14 @@ class EventsController < ApplicationController
 	end
 
 	def create
-		@event = current_user.events.new(event_params)
+		@user = current_user
+		@event = Event.new(event_params)
 		if @event.save
+			@user.events << @event
 			redirect_to root_path
 
 			## To-do: redirect to user#show
-			
+
 		end
 	end
 
