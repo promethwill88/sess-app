@@ -2,5 +2,6 @@
 <div>
   Welcome, <%= @user.first_name %>!
 </div>
-
+<br>
+<%= link_to '<button type="button">Add Track</button>'.html_safe, new_track_path %>
 <%= render "tracks/tracklist" %>
