@@ -23,17 +23,14 @@ class TracksController < ApplicationController
 		@track = Track.find_by_id(params[:id])
 	end
 
-	# def edit
-	# 	@track = set_track
-	# end
+	def destroy
+		@track = Track.find_by_id(params[:id])
+		@track.destroy
+		redirect_to tracks_path
 
-	# def update
-		# respond_to do |f|
-		# 	if @track.update{track_params_update}
-		# 		f.json { render :show, status: :ok, location: @track}
-		# 	else
-		# 		f.json { render json:}
-	# end
+		### To Do: redirect to users#show ###
+	end
+	
 
 	# PRIVATE
 	private
