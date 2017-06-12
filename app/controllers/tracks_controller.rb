@@ -13,6 +13,9 @@ class TracksController < ApplicationController
 		# If track saves, redirect to dsplay all tracks
 		if @track.save
 			redirect_to track_path(@track) #redirect_to "/tracks/#{track.id}"
+
+			### To Do: redirect to users#show ###
+			# :controller => 'users', :action => 'show'
 		end
 	end
  
@@ -38,6 +41,7 @@ class TracksController < ApplicationController
 	def track_params
 		params.require(:track).permit(:artist, :title, :url, :notes)
 	end
+
 
 	# def track_params_update
  #      params.require(:track).permit(:artist, :title, :url, :notes, tracks_attributes: [:id,  :_destroy])
