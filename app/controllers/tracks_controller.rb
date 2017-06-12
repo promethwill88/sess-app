@@ -10,12 +10,11 @@ class TracksController < ApplicationController
 
 	def create
 		@track = current_user.tracks.new(track_params)
-		# If track saves, redirect to dsplay all tracks
 		if @track.save
-			redirect_to track_path(@track) #redirect_to "/tracks/#{track.id}"
-
+			redirect_to track_path(@track) 
+			
 			### To Do: redirect to users#show ###
-			# :controller => 'users', :action => 'show'
+			
 		end
 	end
  
@@ -30,7 +29,7 @@ class TracksController < ApplicationController
 
 		### To Do: redirect to users#show ###
 	end
-	
+
 
 	# PRIVATE
 	private

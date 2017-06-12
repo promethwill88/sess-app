@@ -4,5 +4,8 @@
     <p><h4>Spotify link:</h4><%= track.url %></p>
     <p><h4>Notes:</h4><%= track.notes %></p>
   </div>
+
+    <%= link_to '<button type="button">Details</button>'.html_safe, track_path(track) %>
+
   <br>
 <% end %>
