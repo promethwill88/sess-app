@@ -12,5 +12,6 @@ Rails.application.routes.draw do
 	get '/tracks/new', to: 'tracks#new', as: 'new_track'
 	post '/tracks', to: 'tracks#create'
 	get 'tracks/:id', to: 'tracks#show', as: 'track'
+	delete '/tracks/:id', to: 'tracks#destroy'
 
 end
