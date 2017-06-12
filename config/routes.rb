@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 	post '/tracks', to: 'tracks#create'
 	get 'tracks/:id', to: 'tracks#show', as: 'track'
 	get 'tracks/:id/edit', to: 'tracks#edit', as: 'edit_track'
+	patch 'tracks/:id/', to: 'tracks#update'
 	delete '/tracks/:id', to: 'tracks#destroy'
 
 end
