@@ -25,9 +25,10 @@ class TracksController < ApplicationController
 	def destroy
 		@track = Track.find_by_id(params[:id])
 		@track.destroy
-		redirect_to tracks_path
+		redirect_to root_path
 
 		### To Do: redirect to users#show ###
+		
 	end
 
 
