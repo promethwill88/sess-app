@@ -10,12 +10,8 @@ class TracksController < ApplicationController
 
 	def create
 		@track = current_user.tracks.new(track_params)
-		# If track saves, redirect to dsplay all tracks
 		if @track.save
-			redirect_to track_path(@track) #redirect_to "/tracks/#{track.id}"
-
-			### To Do: redirect to users#show ###
-			# :controller => 'users', :action => 'show'
+			redirect_to user_path(@track.user_id)		
 		end
 	end
  
@@ -23,17 +19,22 @@ class TracksController < ApplicationController
 		@track = Track.find_by_id(params[:id])
 	end
 
-	# def edit
-	# 	@track = set_track
-	# end
+	def edit
+		@track = Track.find_by_id(params[:id])
+	end
 
-	# def update
-		# respond_to do |f|
-		# 	if @track.update{track_params_update}
-		# 		f.json { render :show, status: :ok, location: @track}
-		# 	else
-		# 		f.json { render json:}
-	# end
+	def update
+		@track = Track.find_by_id(params[:id])
+		@track.update_attributes(track_params)
+		redirect_to track_path(@track)
+	end
+
+	def destroy
+		@track = Track.find_by_id(params[:id])
+		@track.destroy
+		redirect_to user_path(@track.user_id)
+	end
+
 
 	# PRIVATE
 	private

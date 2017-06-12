@@ -2,3 +2,6 @@
 <h3><%=  @track.artist %></h3>
 <p><%=  @track.url %></p>
 <p><%=  @track.notes %></p>
+
+<%= button_to "Delete", @track, method: :delete %>
+<%= button_to "Edit", @track, method: :update %>
