@@ -22,13 +22,17 @@ class TracksController < ApplicationController
 		@track = Track.find_by_id(params[:id])
 	end
 
+	def edit
+		@track = Track.find_by_id(params[:id])
+	end
+
 	def destroy
 		@track = Track.find_by_id(params[:id])
 		@track.destroy
 		redirect_to root_path
 
 		### To Do: redirect to users#show ###
-		
+
 	end
 
 
