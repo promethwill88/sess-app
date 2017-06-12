@@ -11,6 +11,9 @@ class EventsController < ApplicationController
 		@event = current_user.events.new(event_params)
 		if @event.save
 			redirect_to root_path
+
+			## To-do: redirect to user#show
+			
 		end
 	end
 
