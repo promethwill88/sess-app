@@ -9,10 +9,13 @@ class TracksController < ApplicationController
 	end
 
 	def create
-		@track = Track.create(track_params)
-		redirect_to tracks_path
+		@track = current_user.tracks.new(track_params)
+		# If track saves, redirect to dsplay all tracks
+		if @track.save
+			redirect_to track_path(@track) #redirect_to "/tracks/#{track.id}"
+		end
 	end
-
+ 
 	def show
 		@track = Track.find_by_id(params[:id])
 	end

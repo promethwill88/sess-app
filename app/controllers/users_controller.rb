@@ -19,8 +19,7 @@ class UsersController < ApplicationController
 	   	if current_user != @user
 	   		redirect_to root_path, notice: "Access Denied"
 	   	end
-	   	@tracks = Track.all #showing all tracks now for all users
-	   	# @tracks = set_track
+	   	@tracks = @user.tracks
 	end
 
 	# PRIVATE
@@ -29,9 +28,5 @@ class UsersController < ApplicationController
 	def user_params
 		params.require(:user).permit(:first_name, :last_name, :email, :password)
 	end
-
-	def set_track
-      @track = Track.find(params[:id])
-    end
 
 end
