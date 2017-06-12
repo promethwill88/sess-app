@@ -26,6 +26,12 @@ class TracksController < ApplicationController
 		@track = Track.find_by_id(params[:id])
 	end
 
+	def update
+		@track = Track.find_by_id(params[:id])
+		@track.update_attributes(track_params)
+		redirect_to track_path(@track)
+	end
+
 	def destroy
 		@track = Track.find_by_id(params[:id])
 		@track.destroy
