@@ -8,6 +8,8 @@
 
 User.destroy_all
 Track.destroy_all
+Event.destroy_all
+Attendance.destroy_all
 
 #################
 ## USERS & TRACKS
@@ -27,3 +29,32 @@ track3 = Track.create({artist: "The Beatles", title:"Let It Be", url:"https://op
 track4 = Track.create({artist: "The Beatles", title:"I've Got a Feeling", url:"https://open.spotify.com/track/3gwRWIbr5ycEVLIAXrWaw7", notes:"Happy days in the past", user_id: user2.id})
 track5 = Track.create({artist: "The Beatles", title:"The Long And Winding Road", url:"https://open.spotify.com/track/3mlMpmY8oZIBFc39D9zLbh", notes:"Great roadtrip song!", user_id: user2.id})
 track6 = Track.create({artist: "The Beatles", title:"I Me Mine", url:"https://open.spotify.com/track/2BMqay80iBzZTa608Y1eG1", notes:"Showerthought song", user_id: user3.id})
+
+#################
+## EVENTS
+#################
+
+# CREATE EVENTS
+
+event1 = Event.create({date: "2017-07-04", time:"2000-01-01 18:00:00", address:"3255 Laguna St. Apt 3", host:"Will"})
+event2 = Event.create({date: "2017-08-20", time:"2000-01-01 15:30:00", address:"101 Geary Ave.", host:"Foster"})
+event3 = Event.create({date: "2017-09-10", time:"2000-01-01 19:45:00", address:"6781 Sutter Ave.", host:"Jennie"})
+event4 = Event.create({date: "2017-10-12", time:"2000-01-01 15:55:00", address:"902 Central Ave.", host:"Christine"})
+event5 = Event.create({date: "2017-11-28", time:"2000-01-01 16:00:00", address:"225 Bush St.", host:"Lily"})
+
+
+#################
+## ATTENDANCE (JOIN TABLE)
+#################
+
+attendance_join = [
+{user_id: user1.id, event_id: event1.id},
+{user_id: user1.id, event_id: event2.id},
+{user_id: user1.id, event_id: event3.id},
+{user_id: user2.id, event_id: event2.id},
+{user_id: user2.id, event_id: event5.id},
+{user_id: user3.id, event_id: event5.id},
+{user_id: user3.id, event_id: event3.id}
+]
+
+Attendance.create(attendance_join)

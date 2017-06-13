@@ -3,5 +3,5 @@
 <p><%=  @track.url %></p>
 <p><%=  @track.notes %></p>
 
-<%= link_to "Delete", @track, method: :delete %>
-<%= link_to "Update", edit_track_path %>
+<%= link_to '<button type="button">Delete</button>'.html_safe, @track, method: :delete %>
+<%= link_to '<button type="button">Update</button>'.html_safe, edit_track_path %>
