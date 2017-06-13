@@ -12,10 +12,7 @@ class EventsController < ApplicationController
 		@event = Event.new(event_params)
 		if @event.save
 			@user.events << @event
-			redirect_to root_path
-
-			## To-do: redirect to user#show
-
+			redirect_to @user
 		end
 	end
 
