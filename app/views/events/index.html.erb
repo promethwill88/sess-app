@@ -1,8 +1,15 @@
+<h2>All Sessions:</h2> 
 <% @events.each do |event| %>
-  <br>
-  	<p>Date: <%= event.date %></p>
-    <p>Time: <%= event.time %></p>
-    <p>Address: <%= event.address %></p>
-    <p>Host: <%= event.host %></p>
-  <br>
+	<br>
+	  	<h4>Date:</h4><%= event.date %>
+	    <h4>Time:</h4><%= event.time %>
+	    <h4>Address:</h4><%= event.address %>
+	    <h4>Host:</h4><%= event.host %>
+  	<br>
+  	<br>
+  	<%= link_to '<button type="button">Add Session to Profile</button>'.html_safe, root_path %>
+	<%= link_to '<button type="button">Update</button>'.html_safe, root_path %>
+	<%= link_to '<button type="button">Delete</button>'.html_safe, root_path %>
+	<br>
 <% end %>
+
