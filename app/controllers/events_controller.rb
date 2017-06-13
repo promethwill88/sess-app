@@ -16,6 +16,26 @@ class EventsController < ApplicationController
 		end
 	end
 
+	def show
+		@event = Event.find_by_id(params[:id])
+	end
+
+	# def edit
+	# 	@event = Event.find_by_id(params[:id])
+	# end
+
+	# def update
+	# 	@event = Event.find_by_id(params[:id])
+	# 	@event.update_attributes(event_params)
+	# 	redirect_to event_path(@event)
+	# end
+
+	# def destroy
+	# 	@event = Event.find_by_id(params[:id])
+	# 	@event.destroy
+	# 	redirect_to user_path(@event.user_id)
+	# end
+
 	# PRIVATE
 	private
 
