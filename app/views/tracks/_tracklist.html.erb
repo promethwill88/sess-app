@@ -1,11 +1,10 @@
 <h2>My Track List:</h2><%= link_to '<button type="button">Add Track</button>'.html_safe, new_track_path %>
 
 <% @tracks.each do |track| %>
-  <div>
+    
     <h3><%= track.title %> by <%= track.artist %></h3>
     <p><h4>Spotify link:</h4><%= track.url %></p>
     <p><h4>Notes:</h4><%= track.notes %></p>
-  </div>
 
     <%= link_to '<button type="button">Details</button>'.html_safe, track_path(track) %>
 
