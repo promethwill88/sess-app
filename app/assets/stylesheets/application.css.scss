@@ -16,11 +16,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
-
-}
-
 #jumbotron {
+
 	.logo {
 		font-family: 'Pacifico', cursive;
 		padding-top: 5%;
@@ -29,10 +26,77 @@ body {
 		font-size: 60px;
 	}
 	.row {
-		
 		padding-bottom: 40%;
 	}
 	background: url(/assets/eric-nopanen-208576.jpg) no-repeat center center;
 	background-size: 105%;
-
 }
+
+#who_div {
+	.row {
+		padding-top: 6%;
+		padding-bottom: 6%;
+	}
+
+	.who_title {
+		font-family: 'Bubbler One', sans-serif;
+		font-size: 40px;
+		text-align: center;
+	}
+}
+
+#title_1 {
+
+	.row {
+		padding-bottom: 40%;
+	}
+
+	.title {
+		font-family: 'Pacifico', cursive;
+		color: white;
+		font-size: 50px;
+		padding-left: 5%;
+		padding-top: 2%;
+	}
+
+	background: url(/assets/paulette-wooten-223050.jpg) no-repeat center center;
+	background-size: 105%;
+}
+
+#title_2 {
+
+	.row {
+		padding-bottom: 40%;
+	}
+
+	.title {
+		font-family: 'Pacifico', cursive;
+		color: white;
+		font-size: 50px;
+		padding-left: 5%;
+		padding-top: 2%;
+	}
+	
+	background: url(/assets/cristina-gottardi-224975.jpg) no-repeat center center;
+	background-size: 105%;
+}
+
+#title_3 {
+
+	.row {
+		padding-bottom: 40%;
+	}
+
+	.title {
+		font-family: 'Pacifico', cursive;
+		color: white;
+		font-size: 50px;
+		padding-left: 5%;
+		padding-top: 2%;
+	}
+	
+	background: url(/assets/rawpixel-com-196464.jpg) no-repeat center center;
+	background-size: 105%;
+}
+
+
