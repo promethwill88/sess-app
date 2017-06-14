@@ -1,17 +1,18 @@
 <div class="container">
 	<div class="row">
 
-		<h3>All Sessions:</h3> 
+		<h3>Attend a Sess</h3> 
 		
 		<% @events.each do |event| %>
 			<br>
-			  	<h4>Date:</h4><%= event.date.strftime("%B") %>
-			    <h4>Time:</h4><%= event.time %>
+			  	<h4>Date:</h4><%= event.date.strftime("%A, %B %d, %Y") %>
+			    <h4>Time:</h4><%= event.time.strftime("%l:%M %P")%>
 			    <h4>Address:</h4><%= event.address %>
 			    <h4>Host:</h4><%= event.host %>
 		  	<br>
+		  	<br>
 
-		  	<%= button_to 'Add Session'.html_safe, attendances_path(event) %>
+		  	<%= button_to 'Attend'.html_safe, attendances_path(event) %>
 			
 			<br>
 		<% end %>

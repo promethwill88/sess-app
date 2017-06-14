@@ -1,18 +1,20 @@
 <h2>My Sess:</h2>
 
-<%= link_to '<button type="button">Add Event</button>'.html_safe, new_event_path %>
-<%= link_to '<button type="button">All Sessions</button>'.html_safe, events_path %>
+<%= link_to '<button type="button">Host</button>'.html_safe, new_event_path %>
+<%= link_to '<button type="button">Attend</button>'.html_safe, events_path %>
 <br>
 
 <% @events.each do |event| %>
   	<br>
-	  	<h4>Date:</h4><%= event.date %>
-	    <h4>Time:</h4><%= event.time %>
+	  	<h4>Date:</h4><%= event.date.strftime("%A, %B %d, %Y") %>
+	    <h4>Time:</h4><%= event.time.strftime("%l:%M %P") %>
 	    <h4>Address:</h4><%= event.address %>
 	    <h4>Host:</h4><%= event.host %>
   	<br>
 	<br>
-  <%= link_to '<button type="button">Details</button>'.html_safe, event_path(event) %>
+
+  <%= link_to '<button type="button">Remove</button>'.html_safe, root_path %>
+
   <br>
 
 <% end %>

@@ -4,7 +4,6 @@ class AttendancesController < ApplicationController
 		@user = current_user
 		@event = Event.find_by_id(params[:event_id])
 		@attendance = Attendance.new(attendance_params)
-		p attendance_params
 		@attendance.user = @user
 		@attendance.event = @event
 		if @attendance.save
@@ -13,6 +12,20 @@ class AttendancesController < ApplicationController
 			p @attendance.errors.full_messages
 			redirect_to root_path
 		end
+	end
+
+	def show
+		@attendance = Attendance.find_by_id(params[:id])
+	end
+
+	def destroy ### To-Do ###
+		@user = current_user
+		@event = Event.find_by_id(params[:event_id])
+
+		@attendance = Attendance.find_by_id(params[:id])
+
+		@attendance.destroy
+	 	redirect_to @user
 	end
 
 	# PRIVATE

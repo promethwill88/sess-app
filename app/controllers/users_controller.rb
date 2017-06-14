@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 	   	end
 	   	@tracks = @user.tracks
 	   	@events = @user.events
+	   	
 	end
 
 	# PRIVATE

@@ -1,4 +1,8 @@
-<h2>My Track List:</h2><%= link_to '<button type="button">Add Track</button>'.html_safe, new_track_path %>
+<div class="container">
+	<div class="row">
+		<h3>My Track List:</h3><%= link_to '<button type="button">Add Track</button>'.html_safe, new_track_path %>	
+	</div>
+</div>
 
 <% @tracks.each do |track| %>
     
