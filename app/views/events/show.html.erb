@@ -7,12 +7,6 @@
     <h4>Time:</h4><%= @event.time.strftime("%l:%M %P") %>
     <p><h4>Address:</h4><%= @event.address %></p>
     <p><h4>Host:</h4><%= @event.host %></p>
-
-    <%= link_to '<button type="button">Delete</button>'.html_safe, @track, method: :delete %>
-
-    <!-- ********* To-do: Change button path to corresponding actions ********* -->
-
-    <%= link_to '<button type="button">Update</button>'.html_safe, root_path %>
-
+    
   </div>
 </div>
