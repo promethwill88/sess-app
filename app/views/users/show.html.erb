@@ -1,11 +1,18 @@
-<h1>Profile</h1>
-<div>
-  Welcome, <%= @user.first_name %>!
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			 <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+		</div>
+	</div>
 </div>
-<br>
-  	<%= link_to '<button type="button">Add Track</button>'.html_safe, new_track_path %>
-  	<%= link_to '<button type="button">Add Event</button>'.html_safe, new_event_path %>
-<br>
-<%= render "tracks/tracklist" %>
-<%= render "events/eventlist" %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<%= render "tracks/tracklist" %>
+		</div>
+		<div class="col-md-6">
+			<%= render "events/eventlist" %>
+		</div>
+	</div>
+</div>
 <br>
