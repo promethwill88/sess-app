@@ -25,5 +25,5 @@ Rails.application.routes.draw do
 	# delete '/events/:id', to: 'events#destroy'
 
 	# Attendance
-	post '/events/:event_id/attendances'
+	post '/events/:event_id/attendances', to: 'attendances#create'
 end
