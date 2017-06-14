@@ -18,7 +18,7 @@ class AttendancesController < ApplicationController
 		@attendance = Attendance.find_by_id(params[:id])
 	end
 
-	def destroy
+	def destroy ### To-Do ###
 		@user = current_user
 		@event = Event.find_by_id(params[:event_id])
 
