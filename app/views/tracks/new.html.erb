@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
 
-    <h3>Add Track</h3>
+    <h3>New Track</h3>
 
     <%= form_for @track do |f| %>
       <div>
@@ -17,7 +17,7 @@
         <%= f.text_field :notes, placeholder: "Notes" %>
       </div>
       
-      <%= f.submit "Save Track" %>
+      <%= f.submit "Add" %>
 
     <% end %>
 
