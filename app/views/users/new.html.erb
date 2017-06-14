@@ -1,17 +1,41 @@
-Sign Up
+<div class="container">
+  <div class="row">
 
-<%= form_for @user do |f| %>
-  <div>
-    <%= f.text_field :first_name, placeholder: "First Name" %>
+    <h3>Member Signup</h3>
+
+    <%= form_for @user do |f| %>
+      <div>
+        <%= f.text_field :first_name, placeholder: "First Name" %>
+      </div>
+      <div>
+        <%= f.text_field :last_name, placeholder: "Last Name" %>
+      </div>
+      <div>
+        <%= f.text_field :email, placeholder: "Email" %>
+      </div>
+      <div>
+        <%= f.password_field :password, placeholder: "Password" %>
+      </div>
+      <%= f.submit "Sign Up" %>
+    <% end %>
+
   </div>
-  <div>
-    <%= f.text_field :last_name, placeholder: "Last Name" %>
+</div>
+
+<div class="container">
+  <div class="row">
+      <h3>Testimonials</h3>
+    <div class="row">
+      <p>Person 1</p>
+      <p>TEXT HERE</p>
+    </div>
+    <div class="row">
+      <p>Person 2</p>
+      <p>TEXT HERE</p>
+    </div>
+    <div class="row">
+      <p>Person 3</p>
+      <p>TEXT HERE</p>
+    </div>
   </div>
-  <div>
-    <%= f.text_field :email, placeholder: "Email" %>
-  </div>
-  <div>
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div>
-  <%= f.submit "Sign Up" %>
-<% end %>
+</div>

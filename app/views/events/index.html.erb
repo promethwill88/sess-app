@@ -1,16 +1,21 @@
-<h2>All Sessions:</h2> 
-<% @events.each do |event| %>
-	<br>
-	  	<h4>Date:</h4><%= event.date %>
-	    <h4>Time:</h4><%= event.time %>
-	    <h4>Address:</h4><%= event.address %>
-	    <h4>Host:</h4><%= event.host %>
-  	<br>
-  	<br>
-  	<!-- ********* To-do: Change button paths to corresponding actions ********* -->
+<div class="container">
+	<div class="row">
 
-  	<%= link_to '<button type="button">Add Session to Profile</button>'.html_safe, #insert path %>
-	
-	<br>
-<% end %>
+		<h3>All Sessions:</h3> 
+		
+		<% @events.each do |event| %>
+			<br>
+			  	<h4>Date:</h4><%= event.date.strftime("%B") %>
+			    <h4>Time:</h4><%= event.time %>
+			    <h4>Address:</h4><%= event.address %>
+			    <h4>Host:</h4><%= event.host %>
+		  	<br>
+
+		  	<%= button_to 'Add Session'.html_safe, attendances_path(event) %>
+			
+			<br>
+		<% end %>
+
+	</div>
+</div>
 
