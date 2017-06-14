@@ -1,6 +1,7 @@
 <h2>My Sess:</h2>
-<%= link_to '<button type="button">All Sessions</button>'.html_safe, events_path %>
+
 <%= link_to '<button type="button">Add Event</button>'.html_safe, new_event_path %>
+<%= link_to '<button type="button">All Sessions</button>'.html_safe, events_path %>
 <br>
 
 <% @events.each do |event| %>
