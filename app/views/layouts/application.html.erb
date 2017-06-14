@@ -11,14 +11,14 @@
   </head>
 
   <body>
-	  <div class="container">
+	  <div class="container" id="nav">
 		  	<div class="row">
 		    <% if current_user %>
-		      <%= link_to "Profile", user_path(current_user) %>
-		      <%= link_to "Log Out", logout_path %>
+		      <%= link_to '<button type="button">Profile</button>'.html_safe, user_path(current_user) %> | 
+		      <%= link_to '<button type="button">Log Out</button>'.html_safe, logout_path %>
 		    <% else %>
-		      <%= link_to "Create Account", new_user_path %>
-		      <%= link_to "Log In", login_path %>
+		      <%= link_to '<button type="button">Create Account</button>'.html_safe, new_user_path %> | 
+		      <%= link_to '<button type="button">Log In</button>'.html_safe, login_path %>
 		    <% end %>
 
 			<% flash.each do |name, msg| %>
