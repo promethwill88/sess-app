@@ -5,12 +5,11 @@
 		
 		<% @events.each do |event| %>
 			<br>
-			  	<h4>Date:</h4><%= event.date %>
+			  	<h4>Date:</h4><%= event.date.strftime("%B") %>
 			    <h4>Time:</h4><%= event.time %>
 			    <h4>Address:</h4><%= event.address %>
 			    <h4>Host:</h4><%= event.host %>
 		  	<br>
-		  	<!-- ********* To-do: Change button paths to corresponding actions ********* -->
 
 		  	<%= button_to 'Add Session'.html_safe, attendances_path(event) %>
 			
