@@ -7,7 +7,7 @@
 <% @events.each do |event| %>
   	<br>
 	  	<h4>Date:</h4><%= event.date.strftime("%A, %B %d, %Y") %>
-	    <h4>Time:</h4><%= event.time %>
+	    <h4>Time:</h4><%= event.time.strftime("%l:%M %P") %>
 	    <h4>Address:</h4><%= event.address %>
 	    <h4>Host:</h4><%= event.host %>
   	<br>
