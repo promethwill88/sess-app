@@ -1,15 +1,11 @@
-<% @events.each do |event| %>
-  <br>
-      <h4>Date:</h4><%= event.date %>
-      <h4>Time:</h4><%= event.time %>
-      <h4>Address:</h4><%= event.address %>
-      <h4>Host:</h4><%= event.host %>
-    <br>
-    <br>
+
+
+      <h4>Date:</h4><%= @event.date %>
+      <h4>Time:</h4><%= @event.time %>
+      <h4>Address:</h4><%= @event.address %>
+      <h4>Host:</h4><%= @event.host %>
+
     <!-- ********* To-do: Change button paths to corresponding actions ********* -->
 
-  <%= link_to '<button type="button">Delete</button>'.html_safe, @track, method: :delete %>
-  <%= link_to '<button type="button">Update</button>'.html_safe, edit_event_path %>
  
-  <br>
-<% end %>
+
