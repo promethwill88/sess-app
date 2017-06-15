@@ -1,16 +1,18 @@
-<div class="container">
+<div class="container" id="tracklist">
 	<div class="row">
-		<h3>My Track List:</h3><%= link_to '<button type="button">Add Track</button>'.html_safe, new_track_path %>	
+		<h3>My Track List:</h3><%= link_to '<button type="button" class="btn btn-outline-primary">Add Track</button>'.html_safe, new_track_path %>	
+		<br>
+		<br>
+		<br>
+		<% @tracks.each do |track| %>
+	    
+	    <h3><%= track.title %> by <%= track.artist %></<h3>
+	    <br>
+	    <p><h4>Spotify link:</h4><%= track.url %></p>
+	    <p><h4>Notes:</h4><%= track.notes %></p>
+
+	    <%= link_to '<button type="button" class="btn btn-outline-primary">Details</button>'.html_safe, track_path(track) %>
+	  	<br>
+		<% end %>
 	</div>
 </div>
-
-<% @tracks.each do |track| %>
-    
-    <h3><%= track.title %> by <%= track.artist %></h3>
-    <p><h4>Spotify link:</h4><%= track.url %></p>
-    <p><h4>Notes:</h4><%= track.notes %></p>
-
-    <%= link_to '<button type="button">Details</button>'.html_safe, track_path(track) %>
-
-  <br>
-<% end %>

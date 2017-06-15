@@ -215,11 +215,35 @@ body {
 		font-size: 20px;
 	}
 	
-
-
-
 }
 
+/* PROFILE */
+h1 {
+	font-family: 'Pacifico', cursive;
+	color: #AE8AED;		
+}
+
+/* TRACK LIST */
+#tracklist {
+	padding-left: 10%;
+	
+	.btn {
+		background-color: white;
+		color: #AE8AED;
+		font-family: 'Pacifico', cursive;
+		font-size: 15px;
+		border: solid #AE8AED;
+	}
 
 
+	h3 {
+		font-family: 'Quicksand', sans-serif;
+		color: #AE8AED;
+	}
+
+	h4 {
+		font-family: 'Quicksand', sans-serif;
+		color: #AE8AED;
+	}
+}
 
