@@ -1,23 +1,24 @@
-<div class="container">
+<div class="container" id="newtrack">
   <div class="row">
 
     <h3>New Track</h3>
+    <p>Add a track + describe why you picked it</p>
 
     <%= form_for @track do |f| %>
       <div>
-        <%= f.text_field :artist, placeholder: "Artist" %>
+        <%= f.text_field :artist, placeholder: "Artist", :class => "field" %>
       </div>
       <div>
-        <%= f.text_field :title, placeholder: "Title" %>
+        <%= f.text_field :title, placeholder: "Title", :class => "field" %>
       </div>
       <div>
-        <%= f.text_field :url, placeholder: "Spotify url" %>
+        <%= f.text_field :url, placeholder: "Spotify url", :class => "field" %>
       </div>
       <div>
-        <%= f.text_field :notes, placeholder: "Notes" %>
+        <%= f.text_field :notes, placeholder: "Notes", :class => "field" %>
       </div>
-      
-      <%= f.submit "Add" %>
+      <br>
+      <%= f.submit "Add", :class => "btn btn-outline-primary" %>
 
     <% end %>
 

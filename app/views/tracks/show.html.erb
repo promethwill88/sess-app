@@ -1,14 +1,14 @@
-<div class="container">
+<div class="container" id="showtrack">
 	<div class="row">
 
-		<h3>Track Details:</h3>
+		<h2>Track Details:</h2>
 
 		<h3><%= @track.title %> by <%=  @track.artist %></h3>
 		<p><h4>Spotify link:</h4><%=  @track.url %></p>
 		<p><h4>Notes:</h4><%=  @track.notes %></p>
 
-		<%= link_to '<button type="button">Delete</button>'.html_safe, @track, method: :delete %>
-		<%= link_to '<button type="button">Update</button>'.html_safe, edit_track_path %>
+		<%= link_to '<button type="button" class="btn btn-outline-primary">Delete</button>'.html_safe, @track, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<%= link_to '<button type="button" class="btn btn-outline-primary">Update</button>'.html_safe, edit_track_path %>
 		
 	</div>
 </div>

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="login">
 	<div class="row">
 
 		<h3>Login</h3>
@@ -6,12 +6,13 @@
 
 		<%= form_for @user, url: "/sessions", method: "post" do |f| %>
 		  <div>
-		    <%= f.text_field :email, placeholder: "Email" %>
+		    <%= f.text_field :email, placeholder: "Email", :class => "field" %>
 		  </div>
 		  <div>
-		    <%= f.password_field :password, placeholder: "Password" %>
+		    <%= f.password_field :password, placeholder: "Password", :class => "field" %>
 		  </div>
-		  <%= f.submit "Log In" %>
+		  <br>
+		  <%= f.submit "Log In", :class => "btn btn-outline-primary" %>
 		<% end %>
 
 	</div>

@@ -1,23 +1,23 @@
-<div class="container">
+<div class="container" id="trackupdate">
   <div class="row">
 
-    <h3>Update Track</h3>
+    <h2>Update Track</h2>
 
     <%= form_for @track do |f| %>
       <div>
-        <%= f.text_field :artist, placeholder: "Artist" %>
+        <%= f.text_field :artist, placeholder: "Artist", :class => "field" %>
       </div>
       <div>
-        <%= f.text_field :title, placeholder: "Title" %>
+        <%= f.text_field :title, placeholder: "Title", :class => "field" %>
       </div>
       <div>
-        <%= f.text_field :url, placeholder: "Spotify url" %>
+        <%= f.text_field :url, placeholder: "Spotify url", :class => "field" %>
       </div>
       <div>
-        <%= f.text_field :notes, placeholder: "Notes" %>
+        <%= f.text_field :notes, placeholder: "Notes", :class => "field" %>
       </div>
-      
-      <%= f.submit "Save" %>
+      <br>
+      <%= f.submit "Save", :class => "btn btn-outline-primary" %>
 
     <% end %>
 

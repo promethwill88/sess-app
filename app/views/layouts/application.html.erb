@@ -6,18 +6,26 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Lusitana|Pacifico" rel="stylesheet">
+
   </head>
 
   <body>
-	  <div class="container">
-		  	<div class="row">
+	  <div class="container" id="nav">
+	  		
+		  	<div class="row" id="nav_buttons">
+			  	<div class="time">
+				  	<%= Time.now.strftime("%A, %B %d, %Y") %>
+			  		<%= Time.now.strftime("%l:%M %P") %>
+		  		</div>
 		    <% if current_user %>
-		      <%= link_to "Profile", user_path(current_user) %>
-		      <%= link_to "Log Out", logout_path %>
+		    	<%= link_to '<button type="button" class="btn btn-outline-primary">Home</button>'.html_safe, root_path %> |
+		      <%= link_to '<button type="button" class="btn btn-outline-primary">Profile</button>'.html_safe, user_path(current_user) %> | 
+		      <%= link_to '<button type="button" class="btn btn-outline-primary">Log Out</button>'.html_safe, logout_path %>
 		    <% else %>
-		      <%= link_to "Create Account", new_user_path %>
-		      <%= link_to "Log In", login_path %>
+		    	<%= link_to '<button type="button" class="btn btn-outline-primary">Home</button>'.html_safe, root_path %> | 
+		      <%= link_to '<button type="button" class="btn btn-outline-primary">Create Account</button>'.html_safe, new_user_path %> | 
+		      <%= link_to '<button type="button" class="btn btn-outline-primary">Log In</button>'.html_safe, login_path %>
 		    <% end %>
 
 			<% flash.each do |name, msg| %>
