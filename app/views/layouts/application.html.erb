@@ -12,13 +12,18 @@
 
   <body>
 	  <div class="container" id="nav">
-		  	<div class="row">
+	  		
+		  	<div class="row" id="nav_buttons">
+			  	<div class="time">
+				  	<%= Time.now.strftime("%A, %B %d, %Y") %>
+			  		<%= Time.now.strftime("%l:%M %P") %>
+		  		</div>
 		    <% if current_user %>
-		      <%= link_to '<button type="button">Profile</button>'.html_safe, user_path(current_user) %> | 
-		      <%= link_to '<button type="button">Log Out</button>'.html_safe, logout_path %>
+		      <%= link_to '<button type="button" class="btn btn-outline-primary">Profile</button>'.html_safe, user_path(current_user) %> | 
+		      <%= link_to '<button type="button" class="btn btn-outline-primary">Log Out</button>'.html_safe, logout_path %>
 		    <% else %>
-		      <%= link_to '<button type="button">Create Account</button>'.html_safe, new_user_path %> | 
-		      <%= link_to '<button type="button">Log In</button>'.html_safe, login_path %>
+		      <%= link_to '<button type="button" class="btn btn-outline-primary">Create Account</button>'.html_safe, new_user_path %> | 
+		      <%= link_to '<button type="button" class="btn btn-outline-primary">Log In</button>'.html_safe, login_path %>
 		    <% end %>
 
 			<% flash.each do |name, msg| %>
