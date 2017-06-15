@@ -1,20 +1,25 @@
-<h3>My Sess:</h3>
-
-<%= link_to '<button type="button">Host</button>'.html_safe, new_event_path %>
-<%= link_to '<button type="button">Attend</button>'.html_safe, events_path %>
 <br>
+<br>
+<div class="container" id="eventlist">
+	<div class="row">
+		<h1>My Sess's:</h1>
 
-<% @events.each do |event| %>
-  	<br>
-	  	<h4>Date:</h4><%= event.date.strftime("%A, %B %d, %Y") %>
-	    <h4>Time:</h4><%= event.time.strftime("%l:%M %P") %>
-	    <h4>Address:</h4><%= event.address %>
-	    <h4>Host:</h4><%= event.host %>
-  	<br>
-	<br>
+		<%= link_to '<button type="button" class="btn btn-outline-primary">Host</button>'.html_safe, new_event_path %>
+		<%= link_to '<button type="button" class="btn btn-outline-primary">Attend</button>'.html_safe, events_path %>
+		<br>
+		<% @events.each do |event| %>
+		  	<br>
+			  	<h3>Date:</h3><%= event.date.strftime("%A, %B %d, %Y") %>
+			    <h3>Time:</h3><%= event.time.strftime("%l:%M %P") %>
+			    <h3>Address:</h3><%= event.address %>
+			    <h3>Host:</h3><%= event.host %>
+		  	<br>
+			<br>
 
-  <%= link_to '<button type="button">Remove</button>'.html_safe, root_path %>
+		  <%= link_to '<button type="button" class="btn btn-outline-primary">Remove</button>'.html_safe, root_path %>
 
-  <br>
+		  <br>
 
-<% end %>
+		<% end %>
+	</div>
+</div>
