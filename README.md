@@ -9,7 +9,7 @@ The goal is share this app amongst friends at first, then gradually branch out t
 Developed by: Will Fong, General Assembly WDI37
 
 * Figma Wireframe: https://www.figma.com/file/DmhyzmZ6X658cnRBW860zErA/Sess
-* Trello: https://trello.com/b/eyqfunlC/sess
+* Trello & ERB: https://trello.com/b/eyqfunlC/sess
 
 # Tools
 
