@@ -10,8 +10,8 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.create(user_params)
-		login(@user) # log the user in
-		redirect_to @user # go to show after create
+		login(@user)
+		redirect_to @user
 	end
 
 	def show
@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 	   	end
 	   	@tracks = @user.tracks
 	   	@events = @user.events
+	   	@attendances = @user.attendances
 	   	
 	end
 

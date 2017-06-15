@@ -7,7 +7,8 @@
 		<%= link_to '<button type="button" class="btn btn-outline-primary">Host</button>'.html_safe, new_event_path %>
 		<%= link_to '<button type="button" class="btn btn-outline-primary">Attend</button>'.html_safe, events_path %>
 		<br>
-		<% @events.each do |event| %>
+		<% @attendances.each do |att| %>
+			<% event = att.event %>
 		  	<br>
 			  	<h3>Date:</h3><%= event.date.strftime("%A, %B %d, %Y") %>
 			    <h3>Time:</h3><%= event.time.strftime("%l:%M %P") %>
@@ -16,8 +17,8 @@
 		  	<br>
 			<br>
 
-		  <%= link_to '<button type="button" class="btn btn-outline-primary">Remove</button>'.html_safe, root_path %>
-
+		 <%= link_to '<button type="button" class="btn btn-outline-primary">Remove</button>'.html_safe, destroy_attendance_path(@user, att), method: :delete %>
+			
 		  <br>
 
 		<% end %>
