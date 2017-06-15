@@ -8,6 +8,7 @@ The goal is share this app amongst friends at first, then gradually branch out t
 
 Developed by: Will Fong, General Assembly WDI37
 
+* Deployed on Heroku: https://radiant-badlands-90321.herokuapp.com/
 * Figma Wireframe: https://www.figma.com/file/DmhyzmZ6X658cnRBW860zErA/Sess
 * Trello & ERB: https://trello.com/b/eyqfunlC/sess
 
