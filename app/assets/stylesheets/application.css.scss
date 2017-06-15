@@ -16,6 +16,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* BODY */
+
+body {
+
+}
+
+/* LAYOUT */
+
 #nav {
 	background-color: #AE8AED;
 	padding-bottom: 1%;
@@ -44,6 +52,7 @@
 	}
 }
 
+/* HOMEPAGE */
 
 #jumbotron {
 
@@ -145,4 +154,43 @@
 	background-color: #AE8AED;
 	padding-bottom: 3%;
 }
+
+/* LOGIN */
+
+#login {
+	text-align: center;
+	background-color: grey;
+	background: url(/assets/james-stamler-153487.jpg) no-repeat center center;
+	background-size: 150%;
+	padding-bottom: 40%;
+	padding-top: 2%;
+	
+	.field {
+		width: 30%;
+		font-family: 'Quicksand', sans-serif;
+	}
+	
+	h3 {
+		font-family: 'Pacifico', cursive;
+		color: white;
+		font-size: 30px
+	}
+
+	p {
+		font-family: 'Quicksand', sans-serif;
+		color: white;
+	}
+
+	.btn {
+		background-color: white;
+		color: #AE8AED;
+		font-family: 'Pacifico', cursive;
+		font-size: 20px;
+	}
+
+
+}
+
+
+
 
