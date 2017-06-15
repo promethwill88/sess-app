@@ -6,7 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Quicksand|Lusitana|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Pacifico" rel="stylesheet">
 
   </head>
 
@@ -16,7 +16,6 @@
 		  	<div class="row" id="nav_buttons">
 			  	<div class="time">
 				  	<%= Time.now.strftime("%A, %B %d, %Y") %>
-			  		<%= Time.now.strftime("%l:%M %P") %>
 		  		</div>
 		    <% if current_user %>
 		    	<%= link_to '<button type="button" class="btn btn-outline-primary">Home</button>'.html_safe, root_path %> |
