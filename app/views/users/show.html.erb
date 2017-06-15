@@ -1,7 +1,12 @@
-<div class="container">
+<div class="container" id="profileheader">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-1" id="prof">
+			<%= image_tag("prof.png") %>
+		</div>
+		<div class="col-md-4" id="fullname">
 			 <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+		</div>
+		<div class="col-md-7">
 		</div>
 	</div>
 </div>

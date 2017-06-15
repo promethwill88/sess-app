@@ -229,15 +229,28 @@ body {
 }
 
 /* PROFILE */
+#profileheader {
+	
+	#prof {
+		padding-left: 2%;
+		padding-top: 1%;
+	}
 
-h1 {
-	font-family: 'Pacifico', cursive;
-	color: #AE8AED;		
+	#fullname {
+		padding-left: 3%;
+		padding-top: 2%;
+	}
+
+	h1 {
+		font-family: 'Pacifico', cursive;
+		color: #AE8AED;	
+	}
 }
 
 /* TRACK LIST */
 
 #tracklist {
+
 	padding-left: 10%;
 	
 	.btn {
