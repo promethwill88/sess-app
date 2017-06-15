@@ -295,3 +295,38 @@ h1 {
 		color: #AE8AED;
 	}
 }
+
+/* NEW TRACK */
+
+#newtrack {
+
+	text-align: center;
+	background: url(/assets/cristian-georgescu-69324.jpg) no-repeat center center;
+	background-size: 170%;
+	padding-bottom: 40%;
+	padding-top: 2%;
+
+	.field {
+			width: 30%;
+			font-family: 'Quicksand', sans-serif;
+	}
+
+	.btn {
+	background-color: white;
+	color: #AE8AED;
+	font-family: 'Pacifico', cursive;
+	font-size: 20px;
+	}
+
+	h3 {
+		font-family: 'Pacifico', cursive;
+		color: white;
+		font-size: 30px
+	}
+
+	p {
+		font-family: 'Quicksand', sans-serif;
+		color: white;
+	}
+}
+
