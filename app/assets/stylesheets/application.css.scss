@@ -159,7 +159,6 @@ body {
 
 #login {
 	text-align: center;
-	background-color: grey;
 	background: url(/assets/james-stamler-153487.jpg) no-repeat center center;
 	background-size: 150%;
 	padding-bottom: 40%;
@@ -187,6 +186,36 @@ body {
 		font-family: 'Pacifico', cursive;
 		font-size: 20px;
 	}
+}
+
+/* ACCOUNT SIGN UP */
+
+#signup {
+	text-align: center;
+	background: url(/assets/corey-blaz-5003.jpg) no-repeat center center;
+	background-size: 150%;
+	padding-bottom: 40%;
+	padding-top: 2%;
+
+	h3 {
+		font-family: 'Pacifico', cursive;
+		color: white;
+		font-size: 30px
+	}
+
+	.field {
+		width: 30%;
+		font-family: 'Quicksand', sans-serif;
+	}
+
+	.btn {
+		background-color: white;
+		color: #AE8AED;
+		font-family: 'Pacifico', cursive;
+		font-size: 20px;
+	}
+	
+
 
 
 }
