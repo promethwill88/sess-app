@@ -19,7 +19,7 @@
 /* BODY */
 
 body {
-
+	margin: 0 auto;
 }
 
 /* LAYOUT */
@@ -201,6 +201,11 @@ body {
 		font-family: 'Pacifico', cursive;
 		color: white;
 		font-size: 30px
+	}
+
+	p {
+		font-family: 'Quicksand', sans-serif;
+		color: white;
 	}
 
 	.field {
