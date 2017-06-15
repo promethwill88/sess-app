@@ -17,6 +17,7 @@ class TracksController < ApplicationController
  
 	def show
 		@track = Track.find_by_id(params[:id])
+		@user = current_user
 	end
 
 	def edit
