@@ -29,3 +29,5 @@ module SessApp
     config.generators.system_tests = nil
   end
 end
+
+config.serve_static_assets = true
