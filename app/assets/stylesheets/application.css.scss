@@ -45,10 +45,11 @@ body {
 	}
 
 	.btn {
-		background-color: white;
-		color: #AE8AED;
+		background-color: transparent;
+		color: white;
 		font-family: 'Pacifico', cursive;
 		font-size: 16px;
+		border: solid #ff5075;
 	}
 }
 
@@ -77,10 +78,6 @@ body {
 	.row {
 		padding-top: 2%;
 		padding-bottom: 2%;
-
-		#vinyl {
-			border: solid black;
-		}
 	}
 
 	.who_title {
@@ -188,10 +185,11 @@ body {
 	}
 
 	.btn {
-		background-color: white;
-		color: #AE8AED;
+		background-color: transparent;
+		color: white;
 		font-family: 'Pacifico', cursive;
 		font-size: 20px;
+		border: solid #AE8AED;
 	}
 }
 
@@ -221,10 +219,11 @@ body {
 	}
 
 	.btn {
-		background-color: white;
-		color: #AE8AED;
+		background-color: transparent;
+		color: white;
 		font-family: 'Pacifico', cursive;
 		font-size: 20px;
+		border: solid #AE8AED;
 	}
 	
 }
@@ -242,7 +241,7 @@ h1 {
 	padding-left: 10%;
 	
 	.btn {
-		background-color: white;
+		background-color: transparent;
 		color: #AE8AED;
 		font-family: 'Pacifico', cursive;
 		font-size: 15px;
@@ -272,7 +271,7 @@ h1 {
 	padding-left: 10%;
 	
 	.btn {
-		background-color: white;
+		background-color: transparent;
 		color: #AE8AED;
 		font-family: 'Pacifico', cursive;
 		font-size: 15px;
@@ -312,10 +311,11 @@ h1 {
 	}
 
 	.btn {
-	background-color: white;
-	color: #AE8AED;
+	background-color: transparent;
+	color: white;
 	font-family: 'Pacifico', cursive;
 	font-size: 20px;
+	border: solid #AE8AED;
 	}
 
 	h3 {
@@ -337,7 +337,7 @@ h1 {
 	padding-left: 10%;
 	
 	.btn {
-		background-color: white;
+		background-color: transparent;
 		color: #AE8AED;
 		font-family: 'Pacifico', cursive;
 		font-size: 15px;
@@ -369,7 +369,7 @@ h1 {
 	padding-left: 10%;
 	
 	.btn {
-		background-color: white;
+		background-color: transparent;
 		color: #AE8AED;
 		font-family: 'Pacifico', cursive;
 		font-size: 15px;
@@ -408,8 +408,8 @@ h1 {
 	padding-top: 2%;
 	
 	.btn {
-		background-color: white;
-		color: #AE8AED;
+		background-color: transparent;
+		color: white;
 		font-family: 'Pacifico', cursive;
 		font-size: 15px;
 		border: solid #AE8AED;
@@ -444,7 +444,7 @@ h1 {
 	padding-left: 10%;
 	
 	.btn {
-		background-color: white;
+		background-color: transparent;
 		color: #AE8AED;
 		font-family: 'Pacifico', cursive;
 		font-size: 15px;
