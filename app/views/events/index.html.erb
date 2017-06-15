@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container" id="eventindex">
 	<div class="row">
 
-		<h3>Attend a Sess</h3> 
-		
+		<h2>Attend a Sess</h2> 
+		<p>Join upcoming sessions!</p>
+		<br>
 		<% @events.each do |event| %>
-			<br>
 			  	<h4>Date:</h4><%= event.date.strftime("%A, %B %d, %Y") %>
 			    <h4>Time:</h4><%= event.time.strftime("%l:%M %P")%>
 			    <h4>Address:</h4><%= event.address %>
@@ -12,7 +12,7 @@
 		  	<br>
 		  	<br>
 
-		  	<%= button_to 'Attend'.html_safe, attendances_path(event) %>
+		  	<%= button_to 'Attend'.html_safe, attendances_path(event), :class => "btn btn-outline-primary" %>
 			
 			<br>
 		<% end %>
